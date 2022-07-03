@@ -1,5 +1,5 @@
-# SolStake v1
-## SolStake is a simple solidity scaffolding library for providing User Staking Data when Staking ERC20 or ETH to a Smart Contract
+# SolidityStake v1
+## SolidityStake is a simple solidity scaffolding library for providing User Staking Data when Staking ERC20 or ETH to a Smart Contract
 
 ### Features Include
 
