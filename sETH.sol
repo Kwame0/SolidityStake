@@ -48,6 +48,11 @@ contract SolStakeEth is ReentrancyGuard, Ownable {
 
     receive() external payable {}
     fallback() external payable {}
+    
+    function SweepETH() external onlyOwner {
+      uint256 a = address(this).balance;
+      // Do whatever with bnb sent to the contract (used to send initial bnb to get farms/yields going)
+    }
 
 
     function AddStakerYield(address addr, uint256 a) private {
