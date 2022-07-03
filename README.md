@@ -1,7 +1,7 @@
 # SolStake v1
 ## SolStake is a simple solidity scaffolding library for providing User Staking Data when Staking ERC20 or ETH to a Smart Contract
-## sETH.sol (For Staking Native ETH/AVAX/BNB/MATIC etc)
-## sTOKEN.sol (For Staking Tokens) 
+<b>sETH.sol (For Staking Native ETH/AVAX/BNB/MATIC etc)<br>
+sTOKEN.sol (For Staking Tokens)</b>
 
 NOTE: Requires OpenZeppelin Contracts<br>
 `npm i @openzeppelin/contracts`
