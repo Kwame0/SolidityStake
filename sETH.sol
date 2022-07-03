@@ -85,13 +85,13 @@ contract SolStakeEth is ReentrancyGuard, Ownable {
 
       if(StakerExists(msg.sender)){
         stakers[msg.sender].lifetime_contribution = stakers[msg.sender].lifetime_contribution + bnb;
-        stakers[msg.sender].contribution = stakers[msg.sender].contribution + bnb;
+        stakers[msg.sender].contribution = stakers[msg.sender].contribution + unstakeable;
         stakers[msg.sender].unstakeable = stakers[msg.sender].unstakeable + unstakeable;
       }else{
         // Create new user
         Staker memory user;
         user.addr = msg.sender;
-        user.contribution = bnb;
+        user.contribution = unstakeable;
         user.lifetime_contribution = bnb;
         user.yield = 0;
         user.exists = true;
