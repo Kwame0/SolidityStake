@@ -29,12 +29,12 @@ NOTE: Requires OpenZeppelin Contracts<br>
 ```solidity
 contract SolStakeEth is ReentrancyGuard, Ownable {
   ...
-  uint256 public eth_staked;
+  uint256 public fees_collected;
   ...
   function Stake() external nonReentrant payable {
     ...
     uint256 fee = (eth * 1000) / 10000;
-    eth_staked = fee;
+    fees_collected = fee;
     LendToAAVEorCURVEorETC(fee);
     ...
   }
@@ -42,8 +42,8 @@ contract SolStakeEth is ReentrancyGuard, Ownable {
 
 contract myContract is SolStakeETH {
   ...
-    function EthStaked() public view returns (uint256){
-      return eth_staked;
+    function FeesCollected() public view returns (uint256){
+      return fees_collected;
     }
   ...
 }
@@ -55,9 +55,9 @@ contract myContract is SolStakeETH {
 ```javascript
 
 await myContract.Stake({ value: ethers.utils.parseEther("1000") });
-let eth = ethers.utils.formatEther(await myContract.EthStaked());
+let total_fees = ethers.utils.formatEther(await myContract.FeesCollected());
 let bal = ethers.utils.formatEther(await myContract.GetStakingAmount(staker.address));
 console.log(bal); // 900
-console.log(eth); // 100
+console.log(total_fees); // 100
 
 ```
