@@ -55,7 +55,9 @@ contract myContract is SolStakeETH {
 ```javascript
 
 await myContract.Stake({ value: ethers.utils.parseEther("1000") });
-let bal = ethers.utils.formatEther(await myContract.EthStaked());
-console.log(bal); // 100
+let eth = ethers.utils.formatEther(await myContract.EthStaked());
+let bal = ethers.utils.formatEther(await myContract.GetStakingAmount(staker.address));
+console.log(bal); // 900
+console.log(eth); // 100
 
 ```
