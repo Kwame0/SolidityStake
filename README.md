@@ -35,7 +35,7 @@ contract SolStakeEth is ReentrancyGuard, Ownable {
     ...
     uint256 fee = (eth * 1000) / 10000;
     fees_collected = fee;
-    LendToAAVEorCURVEorETC(fee);
+    LendToAAVEorCURVEetcETC(fee);
     ...
   }
 }
