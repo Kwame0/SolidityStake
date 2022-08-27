@@ -61,3 +61,5 @@ console.log(bal); // 900
 console.log(total_fees); // 100
 
 ```
+
+## Warning: These smart contracts have not been audited, use at your own risk!
